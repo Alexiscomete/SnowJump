@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class Walls : MonoBehaviour
 {
@@ -14,13 +15,24 @@ public class Walls : MonoBehaviour
         {
             if (wallsY.Length -1 >= i)
             {
-                GameObject ob = Instantiate(wall, new Vector3(wallsX[i], wallsY[i], 0), Quaternion.identity);
+                GameObject ob = Instantiate(wall, new Vector3(wallsX[i] + transform.position.x, wallsY[i], 0), Quaternion.identity);
                 ob.transform.SetParent(transform);
             }
             else
             {
                 break;
             }
+        }
+    }
+
+    private void Update()
+    {
+        if (transform.position.x < (-SpawnObstacles.wallSpeed - wight - (SpawnObstacles.width / 2)))
+        {
+            Console.WriteLine(-SpawnObstacles.wallSpeed - wight - (SpawnObstacles.width / 2));
+            Console.WriteLine(SpawnObstacles.width);
+            SpawnObstacles.walls.RemoveAt(0);
+            Destroy(gameObject);
         }
     }
 }
