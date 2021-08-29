@@ -5,7 +5,8 @@ using UnityEngine;
 public class SpawnObstacles : MonoBehaviour
 {
     public static float wallSpeed = 2;
-    int numberOfWalls = 0;
+    int wallXP = 0;
+    int wallLevel = 0;
 
     public GameObject[] obstaclesTypes;
     public static List<GameObject> walls = new List<GameObject>();
@@ -30,6 +31,20 @@ public class SpawnObstacles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (lastGameObject.transform.position.x < 0)
+        {
+            int rint = new System.Random().Next(wallLevel);
+            GameObject ob = Instantiate(obstaclesTypes[rint], new Vector3(width / 2 + 2, 0, 0), Quaternion.identity);
+            ob.transform.SetParent(transform);
+            walls.Add(ob);
+            lastGameObject = ob;
+            wallXP++;
+            if (wallXP > wallLevel && wallLevel < obstaclesTypes.Length)
+            {
+                wallXP = 0;
+                wallLevel++;
+                wallSpeed += 0.1f;
+            }
+        }
     }
 }
