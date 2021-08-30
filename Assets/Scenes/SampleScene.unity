@@ -261,7 +261,7 @@ MonoBehaviour:
   rb: {fileID: 88852622}
   jumpForce: 400
   groundCheck: {fileID: 1576162747}
-  checkRaduis: 0.3
+  checkRaduis: 0.2
   collisionLayer:
     serializedVersion: 2
     m_Bits: 1
@@ -279,6 +279,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -294,6 +295,23 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2548e970daf67b84680b70f4a0cf22bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 88852618}
+  body: {fileID: 1076213925}
+  timeOffSet: 0.2
+  posOffSet: {x: 7.1, y: 1, z: -10}
+  velocity: {x: 0, y: 0, z: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -401,6 +419,10 @@ MonoBehaviour:
   - {fileID: 7673836276464345947, guid: a12e4b9b61c45144fb18a4ad502254cf, type: 3}
   - {fileID: 4178971793322848043, guid: 82d31e674cbbf6145bdf4b2b36981be4, type: 3}
   - {fileID: 7041225317241963803, guid: da633885535e57a48a3bbc1f4bb4bec9, type: 3}
+  - {fileID: 1778909568882138576, guid: 00ab831dd2bc25945a8fc6f1fe6340b1, type: 3}
+  - {fileID: 1778909568882138576, guid: 00ab831dd2bc25945a8fc6f1fe6340b1, type: 3}
+  - {fileID: 1778909568882138576, guid: 00ab831dd2bc25945a8fc6f1fe6340b1, type: 3}
+  - {fileID: 7673836276464345947, guid: a12e4b9b61c45144fb18a4ad502254cf, type: 3}
   camera: {fileID: 519420031}
 --- !u!1 &1076213925
 GameObject:
@@ -565,6 +587,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1076213930}
+  isGrounded: 1
+  isJumping: 0
+  isHeadJumping: 0
   jumpForce: 350
   jumpForceIfHead: 700
   head: {fileID: 88852623}
@@ -737,7 +762,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576162746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.309, z: 0}
+  m_LocalPosition: {x: 0, y: -0.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 88852620}

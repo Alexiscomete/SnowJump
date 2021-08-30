@@ -35,4 +35,20 @@ public class Walls : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        for (int i = 0; i < wallsX.Length; i++)
+        {
+            if (wallsY.Length - 1 >= i)
+            {
+                Gizmos.color = Color.red;
+                Gizmos.DrawWireSphere(new Vector3(wallsX[i] + transform.position.x, wallsY[i], 0), 0.2f);
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
 }

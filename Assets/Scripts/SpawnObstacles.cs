@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnObstacles : MonoBehaviour
 {
-    public static float wallSpeed = 2;
+    public static float wallSpeed = 3;
     int wallXP = 0;
     int wallLevel = 0;
 
@@ -43,7 +43,7 @@ public class SpawnObstacles : MonoBehaviour
             {
                 wallXP = 0;
                 wallLevel++;
-                wallSpeed += 0.1f;
+                wallSpeed += 0.3f;
             }
         }
     }
