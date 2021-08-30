@@ -5,8 +5,7 @@ using UnityEngine;
 public class SpawnObstacles : MonoBehaviour
 {
     public static float wallSpeed = 3;
-    int wallXP = 0;
-    int wallLevel = 0;
+    public static int wallXP = 0, wallLevel = 0;
 
     public GameObject[] obstaclesTypes;
     public static List<GameObject> walls = new List<GameObject>();
