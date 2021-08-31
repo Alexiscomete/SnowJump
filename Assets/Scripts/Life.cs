@@ -28,7 +28,6 @@ public class Life : MonoBehaviour
             else
             {
                 gameOverMenu.SetActive(true);
-                score.SetScore();
                 ob.SetActive(false);
                 player.SetActive(false);
             }

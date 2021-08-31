@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Main Menu
+  m_Text: Retry
 --- !u!222 &47157078
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 218736549}
   - component: {fileID: 218736548}
   - component: {fileID: 218736547}
+  - component: {fileID: 218736550}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -430,7 +431,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 218736548}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 218736550}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: DoMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &218736548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,6 +482,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218736545}
   m_CullTransparentMesh: 1
+--- !u!114 &218736550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218736545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9d48eb21e3d37146bd019f8873be3cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &219485913
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,7 +564,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Retry
+  m_Text: Main Menu
 --- !u!222 &219485916
 CanvasRenderer:
   m_ObjectHideFlags: 0

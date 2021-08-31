@@ -1,14 +1,13 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnObstacles : MonoBehaviour
 {
     public static float wallSpeed = 3;
-    public static int wallXP = 0, wallLevel = 0;
+    public static int wallXP, wallLevel = 0;
 
     public GameObject[] obstaclesTypes;
-    public static List<GameObject> walls = new List<GameObject>();
+    public static List<GameObject> walls;
 
     GameObject lastGameObject;
 
@@ -18,6 +17,10 @@ public class SpawnObstacles : MonoBehaviour
 
     public void Start()
     {
+        wallSpeed = 3;
+        wallXP = 0;
+        wallLevel = 0;
+        walls = new List<GameObject>();
         cameraStatic = camera;
         height = 2f * camera.orthographicSize;
         width = height * camera.aspect;

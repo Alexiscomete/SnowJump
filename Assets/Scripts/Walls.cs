@@ -1,5 +1,4 @@
 using UnityEngine;
-using System;
 
 public class Walls : MonoBehaviour
 {
@@ -29,8 +28,6 @@ public class Walls : MonoBehaviour
     {
         if (transform.position.x < (-SpawnObstacles.wallSpeed - wight - (SpawnObstacles.width / 2)))
         {
-            Console.WriteLine(-SpawnObstacles.wallSpeed - wight - (SpawnObstacles.width / 2));
-            Console.WriteLine(SpawnObstacles.width);
             SpawnObstacles.walls.RemoveAt(0);
             Destroy(gameObject);
         }
